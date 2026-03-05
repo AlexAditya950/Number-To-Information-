@@ -1,0 +1,17 @@
+build:
+  config:
+    # Environment variables (Heroku me sync: false ka matlab hai aapko manually set karna padega)
+    BOT_TOKEN: ""
+    OWNER_ID: ""
+    OWNER_NAME: ""
+    MONGO_URI: ""
+    PLAYWRIGHT_BROWSERS_PATH: "/opt/render/project/src/browsers"
+  # Agar aap Docker use kar rahe hain
+  docker:
+    worker: Dockerfile  # Agar Dockerfile hai to yahan mention karein
+  # Agar aap Docker nahi use kar rahe hain to buildCommand ko heroku-postbuild me likh sakte hain
+  scripts:
+    heroku-postbuild: chmod +x build.sh && ./build.sh
+
+run:
+  worker: python bot.py   # Worker process command
