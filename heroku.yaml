@@ -1,9 +1,9 @@
 build:
   config:
-    BOT_TOKEN: ""
-    OWNER_ID: ""
-    OWNER_NAME: ""
-    MONGO_URI: ""
+    BOT_TOKEN: "7107142138:AAExraW37E8AVrDXTJ4MAo3hTRAHKKcnvl4"
+    OWNER_ID: "8429473345"
+    OWNER_NAME: "Deepak"
+    MONGO_URI: "mongodb+srv://daxxop:daxxop@daxxop.dg3umlc.mongodb.net/?retryWrites=true&w=majority"
     PLAYWRIGHT_BROWSERS_PATH: "/opt/render/project/src/browsers"
   scripts:
     heroku-postbuild: chmod +x build.sh && ./build.sh
